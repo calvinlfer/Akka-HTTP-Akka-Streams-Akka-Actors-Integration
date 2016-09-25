@@ -38,7 +38,15 @@ they are coming in too quickly.
 Users can hit the `/streaming-jokes` route in order to get back an [SSE](http://www.html5rocks.com/en/tutorials/eventsource/basics/)
 streaming JSON response of Chuck Norris jokes in JSON format.
 
-Credits:
+### Pre-requisites:
+- Scala 2.11.8
+- [SBT](http://www.scala-sbt.org/)
+
+### Instructions: 
+- `sbt run` to start the application
+- Visit `localhost:9000/streaming-jokes` to see the Streaming response
+
+## Credits:
 - [Akka](http://akka.io)
 - Heiko Seeberger's [Akka SSE extension](https://github.com/hseeberger/akka-sse)
 - Lomig Megard's [Akka HTTP CORS extension](https://github.com/lomigmegard/akka-http-cors)
