@@ -23,7 +23,7 @@ The `JokeFetcher` Akka Actor is used to continuously poll the ICNDB
 endpoint behind the scenes and publish each discrete JSON response onto
 the Event Stream as a JokeEvent. 
 
-#### The JokePublisher Actor
+#### The JokePublisher Actor (the integration point with Akka Streams)
 The `JokePublisher` Akka Actor is a point of integration between Akka 
 Actors and Akka Streams. The `JokePublisher` is created whenever a 
 request to the `/streaming-jokes` endpoint which in turn creates an Akka 
