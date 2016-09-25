@@ -2,13 +2,19 @@
 This application is able to respond with a Streaming JSON response of 
 Chuck Norris jokes taken from [here](http://www.icndb.com/api/)
 
+### Purpose
+The purpose of this application was to help familiarize myself (and 
+anyone interested) with how Akka Streams can integrate with Akka Actors 
+and Akka HTTP. Also, I was bored and looking for something fun
+to do :smile:.
+
 The Internet Chuck Norris Database returns a discrete JSON response for
 every HTTP request sent out. Whilst this is okay for most cases, it 
 becomes a bit cumbersome if you want to look at Chuck Norris jokes 
 as you have to keep hitting the endpoint yourself. The goal of this 
 project is to turn those discretized JSON responses into a continuous
 JSON stream. This is done with the help of Akka HTTP, Akka Actors and 
-Akka Streams. 
+Akka Streams.
 
 The `JokeFetcher` Akka Actor is used to continuously poll the ICNDB 
 endpoint behind the scenes and publish each discrete JSON response onto
