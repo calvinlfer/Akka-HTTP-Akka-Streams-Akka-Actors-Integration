@@ -57,6 +57,30 @@ streaming JSON response of Chuck Norris jokes in JSON format.
 - `sbt run` to start the application
 - Visit `localhost:9000/streaming-jokes` to see the Streaming response
 
+### Consumption of Streaming SSE JSON with a JavaScript client
+Here is an example of how to consume the EventStream using JavaScript
+```javascript
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Consuming Streaming JSON</title>
+	</head>
+
+	<body></body>
+	<script>
+	var body = document.body;
+	var eventSource = new EventSource("http://localhost:9000/streaming-jokes");
+	eventSource.addEventListener('jsonJoke', function(event) {
+		var joke = JSON.parse(event.data);
+		body.innerHTML += joke.message + "<br/>";
+	});
+	</script>
+</html>
+```
+The above example will print out the SSE Events received from the server 
+in the browser. You may need to use the [CORS Chrome Addon](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi/related)
+
 ## Credits:
 - [Akka](http://akka.io)
 - Heiko Seeberger's [Akka SSE extension](https://github.com/hseeberger/akka-sse)
