@@ -16,7 +16,7 @@ trait Routes {
   }
 
   private def wrapWithServerSentEvent[T](element: T)(implicit writer: JsonWriter[T]): ServerSentEvent =
-    ServerSentEvent(writer.write(element).compactPrint)
+    ServerSentEvent(data = writer.write(element).compactPrint, eventType = "jsonJoke")
 
   def streamingJokes =
     path("streaming-jokes") {
