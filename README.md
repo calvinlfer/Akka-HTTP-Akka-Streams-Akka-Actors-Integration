@@ -58,7 +58,7 @@ streaming JSON response of Chuck Norris jokes in JSON format.
 - Visit `localhost:9000/streaming-jokes` to see the Streaming response
 
 ### Consumption of Streaming SSE JSON with a JavaScript client
-Here is an example of how to consume the EventStream using JavaScript
+Here is an example of how to consume the Stream using JavaScript
 ```javascript
 <!DOCTYPE html>
 <html>
