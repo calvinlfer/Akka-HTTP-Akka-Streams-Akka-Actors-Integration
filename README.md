@@ -81,6 +81,9 @@ Here is an example of how to consume the EventStream using JavaScript
 The above example will print out the SSE Events received from the server 
 in the browser. You may need to use the [CORS Chrome Addon](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi/related)
 
+##### Preview: 
+![streaming](https://cloud.githubusercontent.com/assets/14280155/18819716/ba70748c-8363-11e6-9d17-68c17999d068.gif)
+
 ## Credits:
 - [Akka](http://akka.io)
 - Heiko Seeberger's [Akka SSE extension](https://github.com/hseeberger/akka-sse)
