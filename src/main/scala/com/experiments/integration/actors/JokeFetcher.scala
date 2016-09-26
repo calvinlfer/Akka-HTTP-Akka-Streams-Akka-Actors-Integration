@@ -23,7 +23,7 @@ class JokeFetcher extends Actor with ActorLogging {
   implicit val ec = context.system.dispatcher
 
   val http = Http(context.system)
-  val url = "http://api.icndb.com/jokes/random"
+  val url = "http://api.icndb.com/jokes/random?escape=javascript"
   var cancellable: Option[Cancellable] = None
 
   override def preStart(): Unit = {
